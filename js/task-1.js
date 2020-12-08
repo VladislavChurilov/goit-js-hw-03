@@ -5,15 +5,14 @@ const user = {
     hobby: 'html',
     premium: true,
     updateName(skydiving){
-            this.hobby = skydiving;
+      this.hobby = skydiving;
             
-        }
-    
+    }
     
   };
   user.mood = 'happy';
   user.premium = false;
-  const keys = Object.keys(user);
+  // const keys = Object.keys(user);
   for (const key of keys){
     console.log(key);
   }
