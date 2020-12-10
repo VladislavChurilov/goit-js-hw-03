@@ -4,16 +4,17 @@ const user = {
     age: 20,
     hobby: 'html',
     premium: true,
-    updateName(skydiving){
-      this.hobby = skydiving;
-            
-    }
-    
+        
   };
+  
   user.mood = 'happy';
+  user.hobby = 'skydiving';
   user.premium = false;
-  // const keys = Object.keys(user);
+  const keys = Object.keys(user);
   for (const key of keys){
-    console.log(key);
+    console.log(`${key}:`, user[key]);
   }
-  console.log (user);updateName ();
+
+  // console.log (user);
+  // const {name, age, hobby = 'skydiving', premium=false} = user;
+  // console.log (user);
