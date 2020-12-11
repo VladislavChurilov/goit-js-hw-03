@@ -5,20 +5,19 @@ const products = [
     { name: 'Захват', price: 1200, quantity: 2 },
   ];
   
-  const calculateTotalPrice = function(allProdcuts, productName) {
-    products: [];
-    console.log(products);
-    let totalPrice = 0;
-    // for (product of products){
-    //     // console.log(products);
-    //     totalPrice = product.price * product.quantity;
-    //     return totalPrice;
-    // }
+  const calculateTotalPrice = function(allProdcuts, productName) {   
     
-  };
+    for (const product of allProdcuts){
+      const {name, price, quantity} = product;    
+      if(product.name === productName ){
+        const totalPrice = (product.price * product.quantity);          
+        return totalPrice;
+      }    
+    }  
+  }
   
   
 
   console.log(calculateTotalPrice(products, 'Радар')); 
   
-//   console.log(calculateTotalPrice(products, 'Дроид')); 
+  console.log(calculateTotalPrice(products, 'Дроид')); 

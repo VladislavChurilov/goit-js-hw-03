@@ -6,23 +6,31 @@ const products = [
   ];
   
   const getAllPropValues = function(arr, prop) {    
-    
-    const {name, price, quantity} = products;
-    console.log(products.push[name]);
-    // const name = [];
-    // const price = [];
-    // const quantity = [];
-    // for (const product of products){
+    const names = [];
+    const prices = [];
+    const quantities = [];
+    let result = [];
+    for(const product of arr){      
+      if(prop === 'name'){
+        names.push(product.name);
+        result = names;          
+      }     
       
-    //   // quantity.push(product.quantity);
-      
-    // }
-    // return quantity;
-    
-  };
-  
-  
-  console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
-//   console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+      if(prop === 'price'){
+        prices.push(product.price);
+        result = prices;            
+      }      
+      if(prop === 'quantity'){
+        quantities.push(product.quantity);
+        result = quantities;           
+      }
+    }
+    return result;
+  }
 
-// console.log(getAllPropValues(products, 'category'));
+    
+  
+  
+console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+console.log(getAllPropValues(products, 'category'));

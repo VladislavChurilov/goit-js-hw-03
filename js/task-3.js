@@ -1,5 +1,6 @@
 const findBestEmployee = function(employees) {
   const keys = Object.keys(employees);
+  
   let best = employees[keys[0]];
   let bestEmployer = keys[0];
   // console.log(employees[0]);
@@ -13,6 +14,7 @@ const findBestEmployee = function(employees) {
   }
   return bestEmployer;  
 }
+// const min = Math.min(...employees[keys]);
 
   console.log(
     findBestEmployee({
