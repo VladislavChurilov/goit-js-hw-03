@@ -5,32 +5,46 @@ const products = [
     { name: 'Захват', price: 1200, quantity: 2 },
   ];
   
-  const getAllPropValues = function(arr, prop) {    
-    const names = [];
-    const prices = [];
-    const quantities = [];
-    let result = [];
-    for(const product of arr){      
-      if(prop === 'name'){
-        names.push(product.name);
-        result = names;          
-      }     
+  const getAllPropValues = function(arr, prop){
+    // const keys = Object.keys(products);
+    for (const keys in products){
       
-      if(prop === 'price'){
-        prices.push(product.price);
-        result = prices;            
-      }      
-      if(prop === 'quantity'){
-        quantities.push(product.quantity);
-        result = quantities;           
-      }
+      // console.log(products[key]);
+      for(const key in keys)
+      console.log(key);
+      
+      // if (name in key){
+      //   console.log(name);
+      // }
     }
-    return result;
   }
+
+  // const getAllPropValues = function(arr, prop) {    
+  //   const names = [];
+  //   const prices = [];
+  //   const quantities = [];
+  //   let result = [];
+  //   for(const product of arr){      
+  //     if(prop === 'name'){
+  //       names.push(product.name);
+  //       result = names;          
+  //     }     
+      
+  //     if(prop === 'price'){
+  //       prices.push(product.price);
+  //       result = prices;            
+  //     }      
+  //     if(prop === 'quantity'){
+  //       quantities.push(product.quantity);
+  //       result = quantities;           
+  //     }
+  //   }
+  //   return result;
+  // }
 
     
   
   
 console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
-console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
-console.log(getAllPropValues(products, 'category'));
+// console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+// console.log(getAllPropValues(products, 'category'));
